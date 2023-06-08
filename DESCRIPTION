@@ -1,4 +1,4 @@
-Package: lessOptimizersTemplateR
+Package: lessparTemplateR
 Type: Package
 Title: Demonstrates the use of lessOptimziers in an R package
 Version: 1.0
@@ -9,3 +9,5 @@ Description: Demo-code
 License: GPL>=2
 Imports: Rcpp (>= 1.0.10)
 LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.2.3
+Encoding: UTF-8

@@ -1,3 +1,3 @@
-useDynLib(lessOptimizersTemplateR, .registration=TRUE)
+useDynLib(lessparTemplateR, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
 exportPattern("^[[:alpha:]]+")

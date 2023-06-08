@@ -40,7 +40,7 @@ arma::rowvec sumSquaredErrorGradients(
   return (gradients);
 }
 
-// IMPORTANT: The library is called lessOptimizers, but
+// IMPORTANT: The library is called lesspar, but
 // because it was initially a sub-folder of lessSEM, the
 // namespace is still called lessSEM.
 
@@ -94,6 +94,10 @@ public:
   linearRegressionModel(arma::colvec y_, arma::mat X_) : y(y_), X(X_){};
 };
 
+//' testPackage
+//' 
+//' Test the linear regression implemented in the package
+//' @return nothing
 // [[Rcpp::export]]
 void testPackage(){
   arma::mat X = {{1.00, -0.70, -0.86},

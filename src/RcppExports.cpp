@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // testPackage
 void testPackage();
-RcppExport SEXP _lessOptimizersTemplateR_testPackage() {
+RcppExport SEXP _lessparTemplateR_testPackage() {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     testPackage();
@@ -22,11 +22,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_lessOptimizersTemplateR_testPackage", (DL_FUNC) &_lessOptimizersTemplateR_testPackage, 0},
+    {"_lessparTemplateR_testPackage", (DL_FUNC) &_lessparTemplateR_testPackage, 0},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_lessOptimizersTemplateR(DllInfo *dll) {
+RcppExport void R_init_lessparTemplateR(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
