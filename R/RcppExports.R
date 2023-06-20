@@ -6,6 +6,6 @@
 #' Test the linear regression implemented in the package
 #' @return nothing
 testPackage <- function() {
-    invisible(.Call(`_lessparTemplateR_testPackage`))
+    invisible(.Call(`_lesstimateTemplateR_testPackage`))
 }
 

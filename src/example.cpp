@@ -40,25 +40,25 @@ arma::rowvec sumSquaredErrorGradients(
   return (gradients);
 }
 
-// IMPORTANT: The library is called lesspar, but
+// IMPORTANT: The library is called lesstimate, but
 // because it was initially a sub-folder of lessSEM, the
 // namespace is still called lessSEM.
 
-class linearRegressionModel : public lessSEM::model
+class linearRegressionModel : public less::model
 {
   
 public:
-  // the lessSEM::model class has two methods: "fit" and "gradients".
+  // the less::model class has two methods: "fit" and "gradients".
   // Both of these methods must follow a fairly strict framework.
   // First: They must receive exactly two arguments:
   //        1) an arma::rowvec with current parameter values
   //        2) an Rcpp::StringVector with current parameter labels
   //          (NOTE: the lessSEM package currently does not make use of these
   //          labels. This is just for future use. If you don't want to use 
-  //          the labels, just pass any lessSEM::stringVector you want).
-  //          if you are using R, a lessSEM::stringVector is just an 
+  //          the labels, just pass any less::stringVector you want).
+  //          if you are using R, a less::stringVector is just an 
   //          Rcpp::StringVector. Otherwise it is a custom vector. that can
-  //          be created with lessSEM::stringVector myVector(numberofParameters).
+  //          be created with less::stringVector myVector(numberofParameters).
   // Second:
   //        1) fit must return a double (e.g., the -2-log-likelihood)
   //        2) gradients must return an arma::rowvec with the gradients. It is
@@ -68,14 +68,14 @@ public:
   //           derivative with respect to the first parameter passed to 
   //           the function).
   
-  double fit(arma::rowvec b, lessSEM::stringVector labels) override
+  double fit(arma::rowvec b, less::stringVector labels) override
   {
     // NOTE: In sumSquaredError we assumed that b was a column-vector. We
     //  have to transpose b to make things work
     return (sumSquaredError(b.t(), y, X));
   }
   
-  arma::rowvec gradients(arma::rowvec b, lessSEM::stringVector labels) override
+  arma::rowvec gradients(arma::rowvec b, less::stringVector labels) override
   {
     // NOTE: In sumSquaredErrorGradients we assumed that b was a column-vector. We
     //  have to transpose b to make things work
@@ -141,7 +141,7 @@ void testPackage(){
   // theta is not used by the lasso penalty:
   arma::rowvec theta = {{0.0, 0.0, 0.0}};
   
-  lessSEM::fitResults fitResult_ = lessSEM::fitGlmnet(
+  less::fitResults fitResult_ = less::fitGlmnet(
     linReg,
     startingValues,
     parameterLabels,
