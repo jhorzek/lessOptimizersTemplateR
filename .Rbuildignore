@@ -1,3 +1,16 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^lesstimateConfig-cmake$
+^.github$
+
+^inst/include/lesstimate/.git$
+^inst/include/lesstimate/.gitignore$
+^inst/include/lesstimate/.github$
+^inst/include/lesstimate/cmake$
+^inst/include/lesstimate/docs$
+^inst/include/lesstimate/CMakeLists.txt$
+^inst/include/lesstimate/lesstimate_logo.png$
+^inst/include/lesstimate/lesstimate_logo.svg$
+^inst/include/lesstimate/LICENSE$
+^inst/include/lesstimate/mkdocs.yml$
+
+

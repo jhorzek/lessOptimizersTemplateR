@@ -1,13 +1,14 @@
 Package: lesstimateTemplateR
 Type: Package
-Title: Demonstrates the use of lessOptimziers in an R package
+Title: Lesstimate Demonstration Package
 Version: 1.0
 Date: 2023-06-06
 Author: Jannik H. Orzek
 Maintainer: Jannik H. Orzek <orzek@mpib-berlin.mpg.de>
-Description: Demo-code
-License: GPL>=2
+Description: Demonstrates the use of lesstimate in an R package.
+License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.10)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.2.3
 Encoding: UTF-8
+SystemRequirements: GNU make, C++14
